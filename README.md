@@ -26,4 +26,4 @@ Durante a manhã (9h-12h30), vocês serão expostos aos conceitos básicos de es
 Durante a tarde (13h30-17h), depois de entender a teoria por trás, vamos utilizar o software _R_ para explorar e fixar de forma ativa o que foi visto pela manhã.
 
 ### Tópicos
-aa
+a
