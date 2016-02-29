@@ -1,11 +1,9 @@
 ---
+title: Bioestatística
 output:
   md_document:
     variant: markdown_github
 ---
-
-
-# Bioestatística
 
 Esta é a página do curso de Bioestatística que está sendo organizado pelos alunos _Matheus Januário Sousa_ e _Murillo Fernando Rodrigues_ e acontecerá nos dias **21 a 23 de abril de 2016**.
 
