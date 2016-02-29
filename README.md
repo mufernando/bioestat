@@ -27,7 +27,7 @@ Os tópicos a serem abordados serão:
     * Histogramas e gráficos de barras
     * Boxplots
     * Tabela de contingência
-    * Estatística $\chi^2$
+    * Estatística qui-quadrado
     * Gráfico de dispersão
     * Correlação
 
@@ -43,7 +43,7 @@ Os tópicos a serem abordados serão:
     * Proporção
     
 * Testes de hipótese
-    * Teste $\chi^2$
+    * Teste qui-quadrado (aderência e independência)
     * Teste _t_
     * ANOVA
     * Regressão linear simples
@@ -60,5 +60,3 @@ _Murillo Fernando Rodrigues_
 
 Mestrando em C. Biológicas (Genética/Biologia Evolutiva) na Universidade de São Paulo (2016-).
 Bacharel em C. Biológicas pela Universidade de São Paulo (2012-2015).
-
-a
