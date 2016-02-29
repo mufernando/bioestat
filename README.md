@@ -32,6 +32,7 @@ Os tópicos a serem abordados serão:
     * Correlação
 
 * Probabilidade e distribuições
+    * Probabilidade
     * Distribuição binomial
     * Distribuição normal
     * Distribuição _t_
