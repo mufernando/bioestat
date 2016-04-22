@@ -61,4 +61,3 @@ _Murillo Fernando Rodrigues_
 
 Mestrando em C. Biológicas (Genética/Biologia Evolutiva) na Universidade de São Paulo (2016-).
 Bacharel em C. Biológicas pela Universidade de São Paulo (2012-2015).
-a
