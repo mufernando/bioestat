@@ -1,0 +1,44 @@
+---
+title: "Programa - BioEstatística (21-23/04)"
+author: "Matheus Januário Sousa e Murillo Fernando Rodrigues"
+output: pdf_document
+---
+
+### 21/04 - Manhã - Análise Exploratória
+* Medidas de posição e dispersão
+* Tabelas de frequência
+* Histogramas e gráficos de barras
+* Boxplots
+* Tabela de contingência
+* Estatística qui-quadrado
+* Gráfico de dispersão
+* Correlação
+
+### 21/04 - Tarde - Primeiros passos no R
+* R como linguagem de programação
+* Sintaxe básica do R
+* Análise exploratória no R
+
+### 22/04 - Manhã - Probabilidade, distribuições e estimação
+* Probabilidade e distribuições
+    * Probabilidade
+    * Distribuição binomial
+    * Distribuição normal
+    * Distribuição _t_
+    * Transformações
+* Estimação
+    * População e amostra
+    * Média
+    * Proporção
+
+### 22/04 - Tarde - Prática no R
+* Explorando probabilidade, distribuições e transformações no R
+
+### 23/04 - Manhã - Testes de hipótese
+* Teste qui-quadrado (aderência e independência)
+* Teste _t_
+* ANOVA
+* Regressão linear simples
+
+### 23/04 - Tarde - Exercício final
+* Utilizando a estatística para responder uma pergunta biológica
