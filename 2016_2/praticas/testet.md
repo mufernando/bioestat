@@ -1,24 +1,26 @@
 #Teste-t no R
 
-A pergunta que nos propusemos a responder em aula foi de quanto pesa uma
-andorinha. Para isso, fomos à campo, coletamos e pesamos 100 indivíduos. Os
-dados obtidos foram tabulados e se encontram nesta [planilha](andorinhas.csv).
+A pergunta que nos propusemos a responder em aula foi de quanto pesa
+uma andorinha. Para isso, fomos à campo, coletamos e pesamos 100
+indivíduos. Os dados obtidos foram tabulados e se encontram nesta
+[planilha](andorinhas.csv).
 
 ###Entrando os dados
 
-Vamos começar carregando os dados da planilha no R. Para isso, use a função
-_read.csv_. Execute o comando `help(read.csv)` caso seja necessário.
+Vamos começar carregando os dados da planilha no R. Para isso, use a
+função _read.csv_. Execute o comando `help(read.csv)` caso seja
+necessário.
 
-Para que sua planilha fique salva e você possa utilizá-la inúmeras vezes, você
-deve atribuir a leitura do .csv para um objeto. Exemplo:
+Para que sua planilha fique salva e você possa utilizá-la inúmeras
+vezes, você deve atribuir a leitura do .csv para um objeto. Exemplo:
 
 ```{r}
 andorinhas = read.csv("andorinhas.csv")
 ```
 
-Note que para esse comando funcionar você deve ter ajustado seu diretório de
-trabalho para o diretório onde o arquivo se encontra. Utilize a função _setwd_
-para esse fim.
+Note que para esse comando funcionar você deve ter ajustado seu
+diretório de trabalho para o diretório onde o arquivo se encontra.
+Utilize a função _setwd_ para esse fim.
 
 ###Calculando medidas de tendência central e variabilidade
 
@@ -31,9 +33,9 @@ Primeiramente, vamos dar uma olhada geral nos dados utilizando o comando _head_.
   utilizando _$_:
 
 ```{r}
-andorinhas$pesos #imprime o vetor dos pesamos
-media = mean(andorinhas$pesos) # calcula a média dos pesos e atribui à variável média
-dp = sd(andorinhas$pesos) # calcula o desvio padrão e atribui à variável dp
+andorinhas$peso #imprime o vetor dos pesamos
+media = mean(andorinhas$peso) # calcula a média dos pesos e atribui à variável média
+dp = sd(andorinhas$peso) # calcula o desvio padrão e atribui à variável dp
 cv = dp/media # calcula o coeficiente de variação e atribui à variável cv
 ```
 
@@ -46,5 +48,86 @@ dp == dp2
 
 Qual foi o resultado? As duas maneiras de calcular o desvio padrão são
 equivalentes? O que o operador `==` faz?
+
+###Teste-t
+
+Depois de explorarmos um pouco nossos dados, podemos realizar um teste
+estatístico. Suponha que previamente se sabia que andorinhas do México
+pesavam 12g, mas sabemos que as andorinhas brasileiras são maiores.
+Queremos testar então se as andorinhas mexicanas e brasileiras possuem
+pesos diferentes. A estatística de interesse que podemos usar é a
+média. Então, nossa hipótese nula estatística deve ser de que
+andorinhas brasileiras pesam 12g. Se refutarmos H0, ficamos com a
+hipótese alternativa de que andorinhas brasileiras têm, em média, peso
+($\mu_{b}$) diferente das andorinhas mexicanas.
+
+$$H_0: \mu_{b} =  12$$
+
+$$H_1: \mu_{b} \neq  12$$
+
+Dê uma olhada na função _t.test_ do R antes de prosseguir (`?t.test`).
+Precisamos de um vetor _x_ com os valores de peso, hipótese
+alternativa _two.sided_ e _mu_ = 12. Tente rodar sozinho antes de prosseguir.
+
+```{r}
+t.test(x = andorinhas$peso, alternative = "two.sided", mu = 12)
+```
+
+Segue o resultado que deverá aparecer no seu console:
+
+```{r}
+One Sample t-test
+
+data:  andorinhas$peso
+t = 14.171, df = 99, p-value < 2.2e-16
+alternative hypothesis: true mean is not equal to 12
+95 percent confidence interval:
+14.67358 15.54420
+sample estimates:
+mean of x
+15.10889
+```
+
+Tente interpretar o que o R nos deu como resultado. Utilize
+o R apenas como calculadora e calcule a estatística _t_ e a média dos pesos
+das andorinhas. O novo resultado bate com o que obtivemos anteriormente?
+Você refutaria a sua hipótese nula com esse p-valor? Por quê?
+
+Um outro resultado interessante que o R mostra é a estimativa
+intervalar, ou intervalo de confiança. A idéia do tamanho amostral e
+do desvio padrão são incorporados nessa estimativa. O que você acha
+que aconteceria se o tamanho amostral fosse menor? E se o desvio
+padrão fosse maior?
+
+###Teste-t com duas populações
+
+No exercício anterior comparamos a média do peso das andorinhas
+brasileiros com um valor conhecido a priori de 12g. No entanto, com
+dados reais quase nunca teremos um valor conhecido a priori. Quando
+quisermos comparar duas populações devemos utilizar o teste-t de duas
+amostras.
+
+Uma outra questão que pode surgir ao olharmos mais atentamente aos
+nossos dados é a de dimorfismo sexual. Anteriormente, fizemos uma
+média pra todas as andorinhas, sem levar em conta o sexo. Será que há
+diferença no peso médio entre os sexos? Veremos!
+
+Primeiramente, vamos separar os dados de machos e fêmeas em dois
+objetos distintos. Tente usar a função _subset_ para fazer isso.
+
+```{r}
+machos = subset(andorinhas, andorinhas$sexo == "M")
+femeas = subset(andorinhas, andorinhas$sexo == "F")
+```
+
+Não prossiga até ter certeza que entendeu o que os dois comandos acima
+fazem. Vamos agorar explorar nossos dados, fazendo as medidas de
+tendência central e variabilidade. Olhando só para essas medidas, você
+diria que há diferença entre o peso médio de machos e fêmeas?
+
+Pense sozinho na hipótese nula estatística e realize o teste-t para
+ver se há diferença entre os sexos. Lembre-se de olhar o _help_ da
+função _t.test_ para realizar o teste. Você diria que essa espécie
+apresenta dimorfismo sexual pra característica peso?
 
 ###Explorando graficamente
