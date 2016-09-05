@@ -5,7 +5,7 @@ uma andorinha. Para isso, fomos à campo, coletamos e pesamos 100
 indivíduos. Os dados obtidos foram tabulados e se encontram nesta
 [planilha](andorinhas.csv).
 
-###Entrando os dados
+##Entrando os dados
 
 Vamos começar carregando os dados da planilha no R. Para isso, use a
 função _read.csv_. Execute o comando `help(read.csv)` caso seja
@@ -22,7 +22,7 @@ Note que para esse comando funcionar você deve ter ajustado seu
 diretório de trabalho para o diretório onde o arquivo se encontra.
 Utilize a função _setwd_ para esse fim.
 
-###Calculando medidas de tendência central e variabilidade
+##Calculando medidas de tendência central e variabilidade
 
 Primeiramente, vamos dar uma olhada geral nos dados utilizando o comando _head_.
  Agora que você já sabe a estrutura do seu _data.frame_ podemos prosseguir.
@@ -49,7 +49,7 @@ dp == dp2
 Qual foi o resultado? As duas maneiras de calcular o desvio padrão são
 equivalentes? O que o operador `==` faz?
 
-###Teste-t
+##Teste-t
 
 Depois de explorarmos um pouco nossos dados, podemos realizar um teste
 estatístico. Suponha que previamente se sabia que andorinhas do México
@@ -99,7 +99,7 @@ do desvio padrão são incorporados nessa estimativa. O que você acha
 que aconteceria se o tamanho amostral fosse menor? E se o desvio
 padrão fosse maior?
 
-###Teste-t com duas populações
+##Teste-t com duas populações
 
 No exercício anterior comparamos a média do peso das andorinhas
 brasileiros com um valor conhecido a priori de 12g. No entanto, com
@@ -130,7 +130,7 @@ ver se há diferença entre os sexos. Lembre-se de olhar o _help_ da
 função _t.test_ para realizar o teste. Você diria que essa espécie
 apresenta dimorfismo sexual pra característica peso?
 
-###Explorando graficamente
+##Explorando graficamente
 
 Antes mesmo de fazer um teste estatístico temos que conhecer os dados com que
 estamos lidando. Uma maneira bem prática e eficaz de fazer isso é com
