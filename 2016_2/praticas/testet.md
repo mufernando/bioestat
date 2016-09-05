@@ -131,3 +131,42 @@ função _t.test_ para realizar o teste. Você diria que essa espécie
 apresenta dimorfismo sexual pra característica peso?
 
 ###Explorando graficamente
+
+Antes mesmo de fazer um teste estatístico temos que conhecer os dados com que
+estamos lidando. Uma maneira bem prática e eficaz de fazer isso é com
+gráficos exploratórios. Vamos aprender como fazer alguns gráficos com o R, que
+ é uma ferramenta poderosa para esse fim.
+
+####Boxplot
+
+Um dos gráficos mais úteis e que melhor resume variáveis contínuas é o
+_boxplot_. Esse gráfico sumariza algumas estatísticas de uma maneira visual
+bem intuitiva. O boxplot é composto por 5 medidas: limite superior, $3^o$
+quartil, mediana, $1^o$ quartil e limite inferior. Como interpretamos esse
+gráfico? Na caixa central, encontra-se 50% das nossas observações. Observando
+a simetria entre os dois lados a partir da mediana podemos saber se nossos
+dados são simétricos ou assimétricos. Só aqui já temos uma boa noção da
+distribuição dos nossos dados.
+
+Fazer um _boxplot_ no R é bem simples. Tente utilizar a função _boxplot_ para
+fazer um boxplot do peso das andorinhas.
+
+```{r}
+boxplot(andorinhas$peso)
+```
+
+Podemos ainda dividir as observações em classes determinadas por uma varíavel
+categórica. Nosso _data.frame_ possui duas colunas: peso e sexo. Podemos
+dividir em dois boxplots, um para fêmeas e outro para machos. Para fazermos
+isso temos que usar uma notação de fórmula do R: `y ~ x`. A nossa varíavel y
+seria o peso das andorinhas e a variável x o sexo. Tente fazer sozinho o
+boxplot por sexo.
+
+####Histograma
+
+Outro gráfico bastante utilizado e que nos mostra mais detalhadamente a
+distribuição dos dados é o histograma. Para fazermos um histograma no R
+basta utilizar a função _hist_. Tente fazer o histograma para a distribuição
+dos pesos das andorinhas. Você acha que a distribuição se aproxima de uma
+normal? Faça agora dois histogramas, um para machos e outro para fêmeas. As
+distribuições se aproximam da normal?

@@ -9,3 +9,8 @@ mean(andorinhas$peso)
 sd(andorinhas$peso)
 
 write.csv(andorinhas, "andorinhas.csv", row.names=F)
+
+t.test(andorinhas$peso, mu = 10)
+
+machos = subset(andorinhas, andorinhas$sexo == "M")
+femeas = subset(andorinhas, andorinhas$sexo == "F")
