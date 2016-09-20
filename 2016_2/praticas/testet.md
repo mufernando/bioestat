@@ -3,7 +3,7 @@
 A pergunta que nos propusemos a responder em aula foi de quanto pesa
 uma andorinha. Para isso, fomos à campo, coletamos e pesamos 100
 indivíduos. Os dados obtidos foram tabulados e se encontram nesta
-[planilha](andorinhas.csv).
+[planilha](https://github.com/mufernando/bioestat/blob/master/2016_2/dados/andorinhas.csv).
 
 ##Entrando os dados
 
