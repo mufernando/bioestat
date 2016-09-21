@@ -38,7 +38,7 @@ Vamos começar aplicando um modelo linear nas variáveis utilizando a função _
 modelo = lm(filhos~mediapais, data=altura)
 ```
 
-Veja o sumário do seu modelo utilizando a função _summary_. Interprete todos os valores que são apresentados no output. Instale e carregue o pacote `car` no R. Agora, utilize a função _Anova_ para obter uma tabela de ANOVA para o modelo. Interprete os valores e tente descobrir a diferença entre _summary_ e _Anova_ (não se esqueça de usar a função _help_). Qual seria o valor esperado de altura do filho para um casal que tem como média de suas alturas o valor de 1,73?
+Veja o sumário do seu modelo utilizando a função _summary_. Interprete todos os valores que são apresentados no output. Instale e carregue o pacote `car` no R. Agora, utilize a função _Anova_ para obter uma tabela de ANOVA para o modelo. Interprete os valores e tente descobrir a diferença entre _summary_ e _Anova_ (não se esqueça de usar a função _help_). Qual seria o valor esperado de altura do filho para um casal que tem como média de suas alturas o valor de 1,73? A hipótese nula da regressão foi rejeitada?
 
 Plote novamente as variáveis preditora e resposta num diagrama de dispersão. Para adicionar a linha de tendência do modelo linear utilize a função _abline_ após fazer o diagrama.
 
