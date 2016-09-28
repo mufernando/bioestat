@@ -3,8 +3,8 @@ title: "Comandos básicos do R"
 author: "Bárbara Costa, Murillo Rodrigues"
 date: "6 a 8 de outubro de 2016"
 output:
-  ioslides_presentation: null
   beamer_presentation: default
+  ioslides_presentation: null
 subtitle: Bioestatística
 toc: yes
 ---
