@@ -6,7 +6,7 @@
 
 # Então, vamos começar! Inicialmente, carregue o arquivo "andorinhas.csv" em um objeto "andorinhas" e explore a planilha de dados e os tipos de variáveis presentes. Dica: use a função "read.csv", "head", "str". Antes, tenha certeza que está no diretório de trabalho correto.
 
-andorinhas = read.csv("andorinhas.csv")
+andorinhas = read.csv("andorinhas_anova.csv")
 str()
 head() 
 
