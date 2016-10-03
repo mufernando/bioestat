@@ -1,6 +1,6 @@
 ## Gerando dados para aula de anova
 
-setwd('~/Desktop/bioestat/scripts/')
+setwd('~/Desktop/bioestat/2016_2/dados/')
 
 set.seed (4)
 
@@ -17,4 +17,4 @@ andorinhas = data.frame (c(rep("AM",30), rep("CE",30),rep("MA",30)), c(Ando.Amaz
 names(andorinhas) = c("subespecies", "asas", "peso", "sexo")
 head(andorinhas)
 
-write.csv (andorinhas, "andorinhas.csv", row.names=F)
+write.csv (andorinhas, "andorinhas_anova.csv", row.names=F)
