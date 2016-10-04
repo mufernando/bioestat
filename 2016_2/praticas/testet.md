@@ -90,7 +90,7 @@ mean of x
 
 Tente interpretar o que o R nos deu como resultado. Utilize
 o R apenas como calculadora e calcule a estatística _t_ e a média dos pesos
-das andorinhas. O novo resultado bate com o que obtivemos anteriormente?
+das andorinhas. Use a função `pt` para calcular o p-valor. O novo resultado bate com o que obtivemos anteriormente?
 Você refutaria a sua hipótese nula com esse p-valor? Por quê?
 
 Um outro resultado interessante que o R mostra é a estimativa
