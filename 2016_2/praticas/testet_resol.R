@@ -21,6 +21,7 @@ t.test(x = andorinhas$peso, alternative = "two.sided", mu = 12)
 
 #teste-t usando R como calculadora
 tobs = (mean(andorinhas$peso)-12)/(dp/sqrt(length(andorinhas$peso)))
+tobs
 pvalor = 2*pt(tobs, df = length(andorinhas$peso)-1, lower.tail=F)
 
 ####

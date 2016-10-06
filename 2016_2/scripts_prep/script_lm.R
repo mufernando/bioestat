@@ -66,7 +66,7 @@ ggplot(pos_cor, aes(x = X1, y = X2)) + geom_point() + theme_Publication() + labs
 
 m = lm(X2 ~ X1,data=pos_cor)
 res = data.frame(resid(m))
-Anova(m)
+anova(m)
 
 ggplot(res, aes(x=resid.m.)) + geom_histogram(binwidth = 0.3) + theme_Publication() + labs(x = "Resíduos", y = "Frequência")
 
