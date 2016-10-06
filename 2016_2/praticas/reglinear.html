@@ -442,7 +442,7 @@ pre[class*="language-"] {
 
 <h2 id="toc_1">Entrando os dados</h2>
 
-<p>Vamos começar carregando os dados. Coletamos a altura dos seus pais e a altura de vocês no primeiro dia de aula e é com essa base de dados que trabalharemos. Baixe e salve a <a href="/">planilha</a> em sua área de trabalho no R.</p>
+<p>Vamos começar carregando os dados. Coletamos a altura dos seus pais e a altura de vocês no primeiro dia de aula e é com essa base de dados que trabalharemos. Baixe e salve a <a href="https://github.com/mufernando/bioestat/blob/master/2016_2/dados/altura.csv">planilha</a> em sua área de trabalho no R.</p>
 
 <div><pre><code class="language-{r}">altura = read.csv(&quot;altura.csv&quot;)</code></pre></div>
 
@@ -468,7 +468,7 @@ pre[class*="language-"] {
 
 <div><pre><code class="language-{r}">modelo = lm(filhos~mediapais, data=altura)</code></pre></div>
 
-<p>Veja o sumário do seu modelo utilizando a função <em>summary</em>. Interprete todos os valores que são apresentados no output. Instale e carregue o pacote <code>car</code> no R. Agora, utilize a função <em>Anova</em> para obter uma tabela de ANOVA para o modelo. Interprete os valores e tente descobrir a diferença entre <em>summary</em> e <em>Anova</em> (não se esqueça de usar a função <em>help</em>). Qual seria o valor esperado de altura do filho para um casal que tem como média de suas alturas o valor de 1,73?</p>
+<p>Veja o sumário do seu modelo utilizando a função <em>summary</em>. Interprete todos os valores que são apresentados no output. Utilize a função <em>anova</em> para obter uma tabela de ANOVA para o modelo. Interprete os valores e tente descobrir a diferença entre <em>summary</em> e <em>anova</em> (não se esqueça de usar a função <em>help</em>). Qual seria o valor esperado de altura do filho para um casal que tem como média de suas alturas o valor de 1,73? A hipótese nula da regressão foi rejeitada?</p>
 
 <p>Plote novamente as variáveis preditora e resposta num diagrama de dispersão. Para adicionar a linha de tendência do modelo linear utilize a função <em>abline</em> após fazer o diagrama.</p>
 
